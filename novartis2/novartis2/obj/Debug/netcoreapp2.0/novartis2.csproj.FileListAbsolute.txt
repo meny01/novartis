@@ -10,3 +10,15 @@ c:\users\talco\source\repos\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis
 c:\users\talco\source\repos\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.AssemblyInfo.cs
 c:\users\talco\source\repos\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.dll
 c:\users\talco\source\repos\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.pdb
+C:\giti\pro1\novartis2\novartis2\bin\Debug\netcoreapp2.0\novartis2.deps.json
+C:\giti\pro1\novartis2\novartis2\bin\Debug\netcoreapp2.0\novartis2.runtimeconfig.json
+C:\giti\pro1\novartis2\novartis2\bin\Debug\netcoreapp2.0\novartis2.runtimeconfig.dev.json
+C:\giti\pro1\novartis2\novartis2\bin\Debug\netcoreapp2.0\novartis2.dll
+C:\giti\pro1\novartis2\novartis2\bin\Debug\netcoreapp2.0\novartis2.pdb
+C:\giti\pro1\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.csprojResolveAssemblyReference.cache
+C:\giti\pro1\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.csproj.CoreCompileInputs.cache
+C:\giti\pro1\novartis2\novartis2\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\giti\pro1\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.AssemblyInfoInputs.cache
+C:\giti\pro1\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.AssemblyInfo.cs
+C:\giti\pro1\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.dll
+C:\giti\pro1\novartis2\novartis2\obj\Debug\netcoreapp2.0\novartis2.pdb

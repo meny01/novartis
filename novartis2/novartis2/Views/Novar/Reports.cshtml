@@ -47,7 +47,7 @@
                         <br />
                         <div style="margin-top: 40px; ">
                             <div style="float: right;">
-                                <select ID="CmbReport" class="form-control" style="direction:rtl; width:200px;" onchange="getData()">
+                                <select ID="CmbReport" class="form-control" style="direction:rtl; width:200px;">
                                     <option>בחר דוח</option>
                                     @foreach (var item in Model.listItemsReports)
                                     {
@@ -93,7 +93,7 @@
                                 </select>
                             </div>
                             <div style="float: left; margin-right:20px;">
-                                <button id="createReportBtn" style="display:none; direction:rtl" onclick="getData3">צור דוח</button>
+                                <button id="createReportBtn" style="display:none; direction:rtl" onclick="getData3()">צור דוח</button>
                             </div>
                             <br />
                             <br />
@@ -104,16 +104,7 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-        function getData() {
-            var CmbReport = $('#CmbReport').val();
-            $.ajax({
-                type: "Post",
-                url: "/Novar/UpdateReportCmb",
-                data: { 'CmbReport': CmbReport },
-            });
-        }
-    </script>
+
     <script type="text/javascript">
         function getData2() {
             $('#timePickers').hide()
@@ -123,14 +114,9 @@
             $('#cmbQuarter').hide()
             $('#createReportBtn').hide()
             var CmbPeriod = $('#CmbPeriod').val();
-
-            $.ajax({
-                type: "Post",
-                url: "/Novar/UpdatePeriodCmb",
-                data: { 'CmbPeriod': CmbPeriod },
-                dataType: 'json',
-                success: function (json) {
-                    if (json == 1) {
+            
+         
+            if (CmbPeriod == "1") {
                         $('#timePickers').datepicker({
                             changeMonth: true,
                             changeYear: true,
@@ -146,7 +132,7 @@
                         $('#timePickers').show()
                         $('#timePickers2').show()
                     }
-                    else if (json == 2) {
+            else if (CmbPeriod == "2") {
                         $('#timePickers3').datepicker({
                             format: "mm-yyyy",
                             viewMode: "months",
@@ -154,25 +140,44 @@
                         });
                         $('#timePickers3').show()
                     }
-                    else if (json == 3) {
+            else if (CmbPeriod == "3") {
                         $('#cmbYears').show()
                         $('#cmbQuarter').show()
                     }
                     $('#createReportBtn').show()
                 }
-            });
-        }
+      
     </script>
 
     <script type="text/javascript">
         function getData3() {
-            var data = [];
+            var CmbPeriod = $('#CmbPeriod').val();
+            var CmbReport = $('#CmbReport').val();
+            if (CmbPeriod == "1")
+            {
+                dt1 = $('#timePickers').val();
+                dt2 = $('#timePickers2').val();
+                data = [CmbReport,CmbPeriod,dt1, dt2];
+            }
+            if (CmbPeriod == "2")
+            {   
+                dt3 = $('#timePickers3').val();
+                data = [CmbReport,CmbPeriod,dt3];
+            }
+            if (CmbPeriod == "3")
+            {
+                cmbYears = $('#cmbYears').val();
+                cmbQuarter = $('#cmbQuarter').val();
+                data = [CmbReport,CmbPeriod,cmbYears, cmbQuarter];
+            }
             $.ajax({
                 type: "Post",
                 url: "/Novar/ClickCreateBtn",
-                data: { 'CmbPeriod': CmbPeriod },
+                data: { 'data': data },
                 dataType: 'json',
                 success: function (json) {
+                }
+            });
         }
     </script>
 

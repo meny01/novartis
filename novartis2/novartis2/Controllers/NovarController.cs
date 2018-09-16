@@ -84,23 +84,57 @@ namespace novartis2.Controllers
             Rm.listItemsPeriod = Rm.listItemsperiod();
             return View(Rm);
         }
-        [HttpPost]
-        public IActionResult UpdateReportCmb(string CmbReport)
-        {
-            Rm.CmbReportVal = Int16.Parse(CmbReport);
-            return Json(null);
-        }
+ 
 
         [HttpPost]
-        public IActionResult UpdatePeriodCmb(string CmbPeriod)
-        {
-            Rm.CmbPeriodVal = Int16.Parse(CmbPeriod);
-            return Json(Rm.CmbPeriodVal);
-        }
-        [HttpPost]
-        public IActionResult ClickCreateBtn(string Data)
+        public IActionResult ClickCreateBtn(string[] Data)
         {
             // get the data and create the tables we need
+            if(Data[0] == "1" && Data[1] == "1")
+            {
+                string fromDate = Data[2];
+                string toDate = Data[3]; 
+            }
+            else if(Data[0] == "1" && Data[1] == "2")
+            {
+                string mounthDate = Data[2];
+            }
+            else if(Data[0] == "1" && Data[1] == "3")
+            {
+                string yearsCmb = Data[2];
+                string quarterCmb = Data[3];
+            }
+            else if (Data[0] == "2" && Data[1] == "1")
+            {
+                string fromDate = Data[2];
+                string toDate = Data[3];
+            }
+            else if (Data[0] == "2" && Data[1] == "2")
+            {
+                string mounthDate = Data[2];
+            }
+            else if (Data[0] == "2" && Data[1] == "3")
+            {
+                string yearsCmb = Data[2];
+                string quarterCmb = Data[3];
+            }
+            if (Data[0] == "3" && Data[1] == "1")
+            {
+                string fromDate = Data[2];
+                string toDate = Data[3];
+            }
+            else if (Data[0] == "3" && Data[1] == "2")
+            {
+                string mounthDate = Data[2];
+            }
+            else if (Data[0] == "3" && Data[1] == "3")
+            {
+                string yearsCmb = Data[2];
+                string quarterCmb = Data[3];
+            }
+            else { } 
+
+
             return Json(null);
         }
 

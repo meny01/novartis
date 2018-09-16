@@ -13265,11 +13265,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\talco\\source\\repos\\novartis2\\novartis2\\novartis2.csproj",
+      "projectUniqueName": "C:\\giti\\pro1\\novartis2\\novartis2\\novartis2.csproj",
       "projectName": "novartis2",
-      "projectPath": "C:\\Users\\talco\\source\\repos\\novartis2\\novartis2\\novartis2.csproj",
+      "projectPath": "C:\\giti\\pro1\\novartis2\\novartis2\\novartis2.csproj",
       "packagesPath": "C:\\Users\\talco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\talco\\source\\repos\\novartis2\\novartis2\\obj\\",
+      "outputPath": "C:\\giti\\pro1\\novartis2\\novartis2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
