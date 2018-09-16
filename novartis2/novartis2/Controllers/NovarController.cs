@@ -87,13 +87,18 @@ namespace novartis2.Controllers
  
 
         [HttpPost]
-        public IActionResult ClickCreateBtn(string[] Data)
+        public IActionResult ClickCreateBtn(string[] Data)  //// data[0] = repotsVal data[1] = periodVal
         {
             // get the data and create the tables we need
-            if(Data[0] == "1" && Data[1] == "1")
+            if(Data[0] == "1" && Data[1] == "1") 
             {
+
                 string fromDate = Data[2];
-                string toDate = Data[3]; 
+                string toDate = Data[3];
+
+                
+                
+
             }
             else if(Data[0] == "1" && Data[1] == "2")
             {
